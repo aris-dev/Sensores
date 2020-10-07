@@ -1,65 +1,66 @@
-<a href="https://cooltext.com"><img src="https://images.cooltext.com/5470134.png" width="773" height="75" alt="MAGIC LIGHT CUP MODULE" /></a>
-<br />Image by <a href="https://cooltext.com">Cool Text: Free Graphics Generator</a> - <a href="https://cooltext.com/Edit-Logo?LogoID=3647584375">Edit Image</a>
+<a href="https://cooltext.com"><img src="https://images.cooltext.com/5470336.png" width="810" height="211" alt="KY-028 TEMPERATURE SENSOR
+
+MODULE" /></a>
+<br />Image by <a href="https://cooltext.com">Cool Text: Free Logos and Buttons</a> - <a href="https://cooltext.com/Edit-Logo?LogoID=3648305604">Create An Image Just Like This</a>
 
 ### **¿Qué es?** 
-*El módulo Keyes Kingduino Compatible Magic Cup Light Modules (KY-027) contiene en su placa un LED indicador, resistencia 103 smd, un header macho de 4 pines de angulo y un interruptor de mercurio en ella.*
+*El Modulo KY-028 Sensor Temperatura Digital los permite medir la temperatura a través de un termistor  NTC, en el cual el proceso de acondicionamiento de los datos le permitirá al sensor adecuar una señal de trabajo operable. Esta construido de un termistor NTC, un comparador lm393, seis resistencias smd, dos led indicadores, un trimput y un header macho de angulo 4 pines.*
 
 ### **¿Cómo funciona?**
-*El interruptor de mercurio encenderá o apagara el LED dependiendo de su posición real a horizontal. **El siguiente video muestra el uso del magic light cup con Arduino:**
+*El sensor temperatura (KY-028) tiene 3 componentes principales en su placa de circuito. Primero, la unidad del sensor en la parte frontal del módulo que mide el área físicamente y envía una señal analógica a la segunda unidad, el amplificador. El amplificador amplifica la señal, de acuerdo con el valor resistente del potenciómetro, y envía la señal a la salida analógica del módulo. **El siguiente video muestra el uso del magic light cup con Arduino:**
 
 
 
-[![Como Usar magic light cup con Arduino](http://img.youtube.com/vi/PT-30OaJF-M/0.jpg)](http://www.youtube.com/watch?v=pCK6prSq8aw)
+[![Como Usar magic light cup con Arduino](https://www.youtube.com/watch?v=rst6QthpigU.jpg)](https://www.youtube.com/watch?v=rst6QthpigU)
 
 ### **Especificaciones Técnicas Y Características**
-+ *Voltaje de alimentación: 3.3 a 5 volts*
-+ *Corriente de salida: 12 mA*
-+ *Salida: Digital*
-+ *Dimensiones: 20 x 18 x 15 mm*
-+ *Peso: 1.83 gr*
-+ *4 pines*
++ *Salida analógica: medición directa de la unidad de sensor*
++ *LED1: muestra que el sensor está recibiendo energía*
++ *LED2: muestra que el sensor a detectado un campo magnetico*
++ *Rango de temperatura: -55 °C / + 125 °C*
++ *Voltaje de funcionamiento: 3.3 Volts a  5 Volts*
++ *Dimensiones: 38 x 15 x 14 mm*
++ *Peso: 3 gr*
 
 ### **Conexión de los pines del módulo** ###
 ![Sensor](https://github.com/aris-dev/Sensores/blob/main/MAGIC%20LIGHT%20CUP%20%20MODULE/m3.PNG "Sensor")
 
-| Pin |       Modulo       |
-|:---:|:------------------:|
-|  G  |    GND (Tierra)    |
-|  V+ | Positivo (5 volts) |
-|  S  |    Señal Digital   |
-|  L  |         LED        |
+|    Pin    |       Modulo       |
+|:---------:|:------------------:|
+|  [Pin 3]  |    Señal Digital   |
+|  [Pin 5V] | Positivo (5 volts) |
+| [Pin GND] |         GND        |
+|  [Pin 0]  |    Señal Analoga   |
 
 ### **Ejemplo De Código De Sensor:** ####
 ```
-int ledPinA = 9;
-int switchPinA = 8;
-int switchStateA = 0;
-int ledPinB = 6;
-int switchPinB = 7;
-int switchStateB = 0;
-int brightness = 0;
-
+int led = 13; // define the LED pin
+int digitalPin = 2; // KY-028 digital interface
+int analoguePin = A0; // KY-028 analogue interface
+int digitalVal; // digital readings
+int analogueVal; //analogue readings
 void setup()
 {
-pinMode(ledPinA, OUTPUT);
-pinMode(ledPinB, OUTPUT);
-pinMode(switchPinA, INPUT);
-pinMode(switchPinB, INPUT);
+pinMode(led, OUTPUT);
+pinMode(digitalPin, INPUT);
+//pinMode(analoguePin, OUTPUT);
+Serial.begin(9600);
 }
 void loop()
 {
-switchStateA = digitalRead(switchPinA);
-if (switchStateA == HIGH && brightness != 255)
+// Read the digital interface
+digitalVal = digitalRead(digitalPin);
+if(digitalVal == HIGH) // if temperature threshold reached
 {
-brightness ++;
+digitalWrite(led, HIGH); // turn ON Arduino's LED
 }
-switchStateB = digitalRead(switchPinB);
-if (switchStateB == HIGH && brightness != 0)
+else
 {
-brightness --;
+digitalWrite(led, LOW); // turn OFF Arduino's LED
 }
-analogueWrite(ledPinA, brightness); // A slow fade out
-analogueWrite(ledPinB, 255 - brightness); // B slow bright up
-delay(20);
+// Read the analogue interface
+analogueVal = analogueRead(analoguePin);
+Serial.println(analogueVal); // print analogue value to serial
+delay(100);
 ```
 
