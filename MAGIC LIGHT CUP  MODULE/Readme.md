@@ -28,13 +28,14 @@
 |  L  |         LED        |
 
 ### **Ejemplo De Código De Sensor:** ####
-  int ledPinA = 9;
-  int switchPinA = 8;
-  int switchStateA = 0;
-  int ledPinB = 6;
-  int switchPinB = 7;
-  int switchStateB = 0;
-  int brightness = 0;
+```
+int ledPinA = 9;
+int switchPinA = 8;
+int switchStateA = 0;
+int ledPinB = 6;
+int switchPinB = 7;
+int switchStateB = 0;
+int brightness = 0;
 
 void setup()
 {
@@ -58,5 +59,5 @@ brightness --;
 analogueWrite(ledPinA, brightness); // A slow fade out
 analogueWrite(ledPinB, 255 - brightness); // B slow bright up
 delay(20);
-
+```
 
