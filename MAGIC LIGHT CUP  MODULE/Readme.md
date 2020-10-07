@@ -20,8 +20,7 @@
 + *4 pines*
 
 ### **Conexión de los pines del módulo** ###
-[id]: https://github.com/aris-dev/Sensores/  "The Dojocat"
-
+![Sensor](https://github.com/aris-dev/Sensores/blob/main/MAGIC%20LIGHT%20CUP%20%20MODULE/m3.PNG "Sensor")
 
 | Pin |       Modulo       |
 |:---:|:------------------:|
