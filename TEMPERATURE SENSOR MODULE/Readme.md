@@ -21,7 +21,7 @@
 + *Peso: 3 gr*
 
 ### **Conexión de los pines del módulo** ###
-![Sensor](https://github.com/aris-dev/Sensores/blob/main/MAGIC%20LIGHT%20CUP%20%20MODULE/m3.PNG "Sensor")
+![Sensor](https://github.com/aris-dev/Sensores/blob/main/TEMPERATURE%20SENSOR%20MODULE/t1.PNG "Sensor")
 
 |    Pin    |       Modulo       |
 |:---------:|:------------------:|
