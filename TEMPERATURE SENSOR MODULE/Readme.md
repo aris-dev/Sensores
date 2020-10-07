@@ -9,7 +9,7 @@
 
 
 
-[![Temperature](http://img.youtube.com/vi/rst6QthpigU&t=1s/1.jpg)](http://www.youtube.com/watch?v=rst6QthpigU&t=1s)
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
 
 ### **Especificaciones Técnicas Y Características**
 + *Salida analógica: medición directa de la unidad de sensor*
