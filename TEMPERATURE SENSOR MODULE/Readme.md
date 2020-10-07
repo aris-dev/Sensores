@@ -1,7 +1,5 @@
-<a href="https://cooltext.com"><img src="https://images.cooltext.com/5470336.png" width="810" height="211" alt="KY-028 TEMPERATURE SENSOR
-
-MODULE" /></a>
-<br />Image by <a href="https://cooltext.com">Cool Text: Free Logos and Buttons</a> - <a href="https://cooltext.com/Edit-Logo?LogoID=3648305604">Create An Image Just Like This</a>
+<a href="https://cooltext.com"><img src="https://images.cooltext.com/5470346.png" width="1029" height="97" alt="KY-028 TEMPERATURE SENSOR MODULE" /></a>
+<br />Image by <a href="https://cooltext.com">Cool Text: Free Graphics Generator</a> - <a href="https://cooltext.com/Edit-Logo?LogoID=3648324763">Edit Image</a>
 
 ### **¿Qué es?** 
 *El Modulo KY-028 Sensor Temperatura Digital los permite medir la temperatura a través de un termistor  NTC, en el cual el proceso de acondicionamiento de los datos le permitirá al sensor adecuar una señal de trabajo operable. Esta construido de un termistor NTC, un comparador lm393, seis resistencias smd, dos led indicadores, un trimput y un header macho de angulo 4 pines.*
