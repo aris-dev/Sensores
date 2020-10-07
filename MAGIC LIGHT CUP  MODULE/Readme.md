@@ -20,6 +20,9 @@
 + *4 pines*
 
 ### **Conexión de los pines del módulo** ###
+[id]: https://github.com/aris-dev/Sensores/  "The Dojocat"
+
+
 | Pin |       Modulo       |
 |:---:|:------------------:|
 |  G  |    GND (Tierra)    |
